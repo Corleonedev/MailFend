@@ -5,6 +5,7 @@ import LoginPage from "./Components/LoginPage";
 import HomePage from "./Components/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import { DarkModeProvider } from "./Components/DarkModeContext";
 
 function App() {
   function LandingPage() {
@@ -18,6 +19,7 @@ function App() {
   }
 
   return (
+    <DarkModeProvider>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -33,6 +35,7 @@ function App() {
         />
       </Routes>
     </BrowserRouter>
+    </DarkModeProvider>
   );
 }
 
