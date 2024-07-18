@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
 *{
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .animated-text {
@@ -11,11 +11,6 @@
   animation: color-change 5s infinite alternate ease-in-out;
 }
 
-@keyframes color-change {
-  0% { color: #333; }
-  50% { color: #007bff; }
-  100% { color: #333; }
-}
 
 
 
@@ -29,4 +24,46 @@
   to { opacity: 1; }
 }
 
+@keyframes shake {
+  0% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s infinite;
+}
+.compose-button-container {
+  position: fixed;
+  bottom: 16px;
+  
+  text-align: center;
+}
+
+.compose-button-container .MuiButton-contained {
+  width: calc(100% - 32px); 
+  margin: 0 16px;
+}
+
+.compose-button-container .MuiButton-contained.bg-gray-700 {
+  background-color: #3b3b3b;
+}
+
+.compose-button-container .MuiButton-contained.bg-blue-500 {
+  background-color: #1a73e8;
+}
+
+.compose-button-container .MuiButton-contained.bg-gray-700:hover {
+  background-color: #4a4a4a;
+}
+
+.compose-button-container .MuiButton-contained.bg-blue-500:hover {
+  background-color: #135ba1;
+}
 
